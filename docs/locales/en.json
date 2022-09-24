@@ -1,0 +1,16 @@
+{
+  "login": "Login",
+  "email": "E-mail",
+  "password": "Password",
+  "repeatPassword": "Repeat password",
+  "signIn": "Sign in",
+  "signUp": "Sign up",
+  "logIn!": "Log In!",
+  "signUp!": "Sign up!",
+  "registration": "Registration",
+  "alreadyHaveAccount": "Alreadi have account?",
+  "dontHaveAccount": "Don't have account?",
+  "required": "Required",
+  "passwordStrength": "Password strength",
+  "passwordRules": "Password must contain at least 8 characters, 1 uppercase letter and 1 digit."
+}
