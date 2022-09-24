@@ -36,6 +36,10 @@ const Login = () => {
                 required: true,
                 message: t("login.required"),
               },
+              {
+                pattern: /^[\w\-\.]+@[\w\-\.]+$/,
+                message: t("login.wrongEmailFormat"),
+              },
             ]}
           >
             <Input placeholder={t("login.email")} />

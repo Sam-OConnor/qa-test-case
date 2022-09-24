@@ -6,19 +6,23 @@
     "password": "密碼",
     "dontHaveAccount": "沒有賬號？",
     "signUp!": "註冊！",
-    "signIn": "登入"
+    "signIn": "登入",
+    "wrongEmailFormat": "錯誤的電子郵件格式"
   },
 
   "register": {
     "registration": "登記",
     "email": "電子郵件",
+    "emails": "電子郵件",
     "required": "必需的",
     "password": "密碼",
-    "repeatPassword": "重複輸入密碼",
+    "repeatPasword": "重複輸入密碼",
+    "repeadPassword": "重複輸入密碼",
     "passwordStrength": "密碼強度",
     "passwordRules": "密碼必須至少包含 8 個字符、1 個大寫字母和 1 個數字。",
     "alreadyHaveAccount": "已經有賬號？",
     "logIn!": "登錄！",
-    "signUp": "註冊"
+    "signUp": "註冊",
+    "wrongEmailFormat": "錯誤的電子郵件格式"
   }
 }

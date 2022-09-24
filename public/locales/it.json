@@ -1,24 +1,28 @@
 {
   "login": {
-    "login": "Login",
+    "login": "Accedere",
     "email": "E-mail",
     "required": "Necessario",
     "password": "Parola d'ordine",
     "dontHaveAccount": "Non hai un account?",
     "signUp!": "Iscrizione!",
-    "signIn": "Registrazione"
+    "signIn": "Registrazione",
+    "wrongEmailFormat": "Formato e-mail errato"
   },
 
   "register": {
     "registration": "Registration",
     "email": "E-mail",
+    "emails": "emails",
     "required": "Required",
     "password": "Password",
-    "repeatPassword": "Repeat password",
+    "repeatPasword": "Repeat pasword",
+    "repeadPassword": "Repead password",
     "passwordStrength": "Password strength",
     "passwordRules": "Password must contain at least 8 characters, 1 uppercase letter and 1 digit.",
     "alreadyHaveAccount": "Alreadi have account?",
     "logIn!": "Log In!",
-    "signUp": "Sign up"
+    "signUp": "Sign up",
+    "wrongEmailFormat": "Wrong email format"
   }
 }

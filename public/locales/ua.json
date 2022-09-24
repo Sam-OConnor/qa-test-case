@@ -6,19 +6,23 @@
     "password": "Пароль",
     "dontHaveAccount": "Немає облікового запису?",
     "signUp!": "Зареєструватися!",
-    "signIn": "Увійти"
+    "signIn": "Увійти",
+    "wrongEmailFormat": "Неправильний формат електронної пошти"
   },
 
   "register": {
     "registration": "Реєстрація",
     "email": "Електронна пошта",
+    "emails": "електронні листи",
     "required": "вимагається",
     "password": "Пароль",
-    "repeatPassword": "Повторіть пароль",
+    "repeatPasword": "Повторіть пароль",
+    "repeadPassword": "Повторіть пароль",
     "passwordStrength": "Надійність паролю",
     "passwordRules": "Пароль має містити не менше 8 символів, 1 велику літеру та 1 цифру.",
     "alreadyHaveAccount": "Вже маєте акаунт?",
     "logIn!": "Увійти!",
-    "signUp": "Зареєструватися"
+    "signUp": "Зареєструватися",
+    "wrongEmailFormat": "Неправильний формат електронної пошти"
   }
 }

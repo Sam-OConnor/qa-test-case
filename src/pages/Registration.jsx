@@ -5,6 +5,15 @@ import { Card, Form, Input, Button, Progress, Popover } from "antd";
 import { InfoCircleOutlined } from "@ant-design/icons";
 import LangSelector from "../components/LangSelector";
 
+const lowerCaseRegex = "(?=.*[a-z])";
+const upperCaseRegex = "(?=.*[A-Z])";
+const symbolsRegex = "(?=.*[!@#$%^&*])";
+const numericRegex = "(?=.*[0-9])";
+
+const passwordRegex = new RegExp(
+  `^((${lowerCaseRegex}${upperCaseRegex}${symbolsRegex})|(${lowerCaseRegex}${upperCaseRegex}${numericRegex})|(${lowerCaseRegex}${symbolsRegex}${numericRegex})|(${upperCaseRegex}${symbolsRegex}${numericRegex}))(?=.{8,})`
+);
+
 const Registration = () => {
   const { t } = useTranslation();
 
@@ -37,9 +46,13 @@ const Registration = () => {
                 required: true,
                 message: t("register.required"),
               },
+              {
+                pattern: /^[\w\-\@]+[\.]{1}[\w-]{2,4}$/,
+                message: t("register.wrongEmailFormat"),
+              },
             ]}
           >
-            <Input placeholder={t("register.email")} />
+            <Input placeholder={t("register.emails")} />
           </Form.Item>
         </div>
 
@@ -49,8 +62,8 @@ const Registration = () => {
             name="password"
             rules={[
               {
-                required: true,
-                message: t("register.required"),
+                pattern: passwordRegex,
+                message: t("register.passwordRules"),
               },
             ]}
           >
@@ -59,7 +72,7 @@ const Registration = () => {
         </div>
 
         <div>
-          {t("register.repeatPassword")}
+          {t("register.repeatPasword")}
           <Form.Item
             name="repeatPassword"
             rules={[
@@ -69,7 +82,7 @@ const Registration = () => {
               },
             ]}
           >
-            <Input.Password placeholder={t("register.repeatPassword")} />
+            <Input.Password placeholder={t("register.repeadPassword")} />
           </Form.Item>
         </div>
 

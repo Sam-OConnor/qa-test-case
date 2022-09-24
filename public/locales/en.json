@@ -6,19 +6,23 @@
     "password": "Password",
     "dontHaveAccount": "Don't have account?",
     "signUp!": "Sign up!",
-    "signIn": "Sign in"
+    "signIn": "Sign in",
+    "wrongEmailFormat": "Wrong email format"
   },
 
   "register": {
     "registration": "Registration",
     "email": "E-mail",
+    "emails": "emails",
     "required": "Required",
     "password": "Password",
-    "repeatPassword": "Repeat password",
+    "repeatPasword": "Repeat pasword",
+    "repeadPassword": "Repead password",
     "passwordStrength": "Password strength",
     "passwordRules": "Password must contain at least 8 characters, 1 uppercase letter and 1 digit.",
     "alreadyHaveAccount": "Alreadi have account?",
     "logIn!": "Log In!",
-    "signUp": "Sign up"
+    "signUp": "Sign up",
+    "wrongEmailFormat": "Wrong email format"
   }
 }
