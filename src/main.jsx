@@ -7,7 +7,7 @@ import "antd/dist/antd.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="https://sam-oconnor.github.io/qa-test-case/">
       <App />
     </BrowserRouter>
   </React.StrictMode>
