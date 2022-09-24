@@ -1,0 +1,24 @@
+{
+  "login": {
+    "login": "Conecte-se",
+    "email": "E-mail",
+    "required": "Requeridos",
+    "password": "Senha",
+    "dontHaveAccount": "Não tem conta?",
+    "signUp!": "Inscrever-se!",
+    "signIn": "Entrar"
+  },
+
+  "register": {
+    "registration": "Cadastro",
+    "email": "E-mail",
+    "required": "Requeridos",
+    "password": "Senha",
+    "repeatPassword": "Repita a senha",
+    "passwordStrength": "Força da senha",
+    "passwordRules": "A senha deve conter no mínimo 8 caracteres, 1 letra maiúscula e 1 dígito.",
+    "alreadyHaveAccount": "Já tem conta?",
+    "logIn!": "Conecte-se!",
+    "signUp": "Inscrever-se"
+  }
+}

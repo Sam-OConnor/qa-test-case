@@ -2,11 +2,11 @@
   "login": {
     "login": "Login",
     "email": "E-mail",
-    "required": "Required",
-    "password": "Password",
-    "dontHaveAccount": "Don't have account?",
-    "signUp!": "Sign up!",
-    "signIn": "Sign in"
+    "required": "Necessario",
+    "password": "Parola d'ordine",
+    "dontHaveAccount": "Non hai un account?",
+    "signUp!": "Iscrizione!",
+    "signIn": "Registrazione"
   },
 
   "register": {

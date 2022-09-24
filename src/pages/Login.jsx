@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Card, Form, Input, Button } from "antd";
+import LangSelector from "../components/LangSelector";
 
 const Login = () => {
   const { t } = useTranslation();
@@ -15,7 +16,7 @@ const Login = () => {
   };
 
   return (
-    <Card title={t("login")}>
+    <Card title={t("login.login")} extra={<LangSelector />}>
       <Form
         name="login"
         size="large"
@@ -27,38 +28,39 @@ const Login = () => {
         }}
       >
         <div>
-          {t("email")}
+          {t("login.email")}
           <Form.Item
             name="email"
             rules={[
               {
                 required: true,
-                message: t("required"),
+                message: t("login.required"),
               },
             ]}
           >
-            <Input placeholder={t("email")} />
+            <Input placeholder={t("login.email")} />
           </Form.Item>
         </div>
 
         <div>
-          {t("password")}
+          {t("login.password")}
           <Form.Item
             name="password"
             rules={[
               {
                 required: true,
-                message: t("required"),
+                message: t("login.required"),
               },
             ]}
             style={{ marginBottom: 5 }}
           >
-            <Input type="password" placeholder={t("password")} />
+            <Input type="password" placeholder={t("login.password")} />
           </Form.Item>
         </div>
 
         <div style={{ textAlign: "right" }}>
-          {t("dontHaveAccount")} <Link to="/sign-up">{t("signUp!")}</Link>
+          {t("login.dontHaveAccount")}{" "}
+          <Link to="/sign-up">{t("login.signUp!")}</Link>
         </div>
 
         <Form.Item style={{ marginTop: 20, marginBottom: 0 }}>
@@ -68,7 +70,7 @@ const Login = () => {
             size="large"
             style={{ margin: "0 auto", display: "block", minWidth: 140 }}
           >
-            {t("signIn")}
+            {t("login.signIn")}
           </Button>
         </Form.Item>
       </Form>

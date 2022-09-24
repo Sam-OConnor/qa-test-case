@@ -1,0 +1,24 @@
+{
+  "login": {
+    "login": "लॉग इन करें",
+    "email": "ईमेल",
+    "required": "आवश्यक",
+    "password": "पासवर्ड",
+    "dontHaveAccount": "खाता नहीं है?",
+    "signUp!": "साइन अप करें!",
+    "signIn": "साइन इन करें"
+  },
+
+  "register": {
+    "registration": "पंजीकरण",
+    "email": "ईमेल",
+    "required": "आवश्यक",
+    "password": "पासवर्ड",
+    "repeatPassword": "पासवर्ड दोहराएं",
+    "passwordStrength": "पासवर्ड क्षमता",
+    "passwordRules": "पासवर्ड में कम से कम 8 अक्षर, 1 बड़ा अक्षर और 1 अंक होना चाहिए।",
+    "alreadyHaveAccount": "पहले से खाता है?",
+    "logIn!": "लॉग इन करें!",
+    "signUp": "साइन अप करें"
+  }
+}
