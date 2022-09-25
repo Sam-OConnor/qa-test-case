@@ -28,6 +28,7 @@ const Registration = () => {
     JSON.parse(localStorage.getItem("qaTestDb")) || []
   );
   const { t } = useTranslation();
+  const [form] = Form.useForm();
 
   useEffect(() => {
     localStorage.setItem("qaTestDb", JSON.stringify(qaTestDb));
@@ -47,6 +48,8 @@ const Registration = () => {
       type: "error",
       message: t("register.success"),
     });
+
+    form.resetFields();
   };
 
   const openNotificationWithIcon = ({ type, message }) => {
@@ -64,11 +67,14 @@ const Registration = () => {
       <Form
         name="login"
         size="large"
+        form={form}
         onFinish={onFinish}
-        validateTrigger="onSubmit"
-        initialValues={{
-          remember: true,
+        onFinishFailed={() => {
+          const errors = form.getFieldsError();
+          form.resetFields();
+          form.setFields(errors);
         }}
+        validateTrigger="onSubmit"
       >
         <div>
           {t("register.email")}

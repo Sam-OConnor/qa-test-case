@@ -10,6 +10,7 @@ const Login = () => {
     JSON.parse(localStorage.getItem("qaTestDb")) || []
   );
   const { t } = useTranslation();
+  const [form] = Form.useForm();
 
   useEffect(() => {
     localStorage.setItem("qaTestDb", JSON.stringify(qaTestDb));
@@ -51,6 +52,7 @@ const Login = () => {
         message: t("login.success"),
         description: "",
       });
+      form.resetFields();
     }
   };
 
@@ -58,12 +60,10 @@ const Login = () => {
     <Card className="card" title={t("login.login")} extra={<LangSelector />}>
       <Form
         name="login"
+        form={form}
         size="large"
         onFinish={onFinish}
         validateTrigger="onSubmit"
-        initialValues={{
-          remember: true,
-        }}
       >
         <div>
           {t("login.email")}
