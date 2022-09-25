@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Card, Form, Input, Button, Progress, Popover } from "antd";
+import {
+  Card,
+  Form,
+  Input,
+  Button,
+  Progress,
+  Popover,
+  notification,
+} from "antd";
 import { InfoCircleOutlined } from "@ant-design/icons";
 import LangSelector from "../components/LangSelector";
 
@@ -15,14 +23,35 @@ const passwordRegex = new RegExp(
 );
 
 const Registration = () => {
+  const [qaTestDb, setQaTestDb] = useState(
+    JSON.parse(localStorage.getItem("qaTestDb")) || []
+  );
   const { t } = useTranslation();
 
+  useEffect(() => {
+    localStorage.setItem("qaTestDb", JSON.stringify(qaTestDb));
+  }, [qaTestDb]);
+
   const onFinish = (values) => {
-    console.log("Success:", values);
+    const { email, password } = values;
+    setQaTestDb([
+      ...qaTestDb,
+      {
+        email,
+        password,
+      },
+    ]);
+
+    openNotificationWithIcon({
+      type: "error",
+      message: t("register.success"),
+    });
   };
 
-  const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
+  const openNotificationWithIcon = ({ type, message }) => {
+    notification[type]({
+      message,
+    });
   };
 
   return (
@@ -31,7 +60,6 @@ const Registration = () => {
         name="login"
         size="large"
         onFinish={onFinish}
-        onFinishFailed={onFinishFailed}
         validateTrigger="onSubmit"
         initialValues={{
           remember: true,

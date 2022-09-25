@@ -7,7 +7,11 @@
     "dontHaveAccount": "沒有賬號？",
     "signUp!": "註冊！",
     "signIn": "登入",
-    "wrongEmailFormat": "錯誤的電子郵件格式"
+    "wrongEmailFormat": "錯誤的電子郵件格式",
+    "userNotFound": "未找到用戶",
+    "wrongPassword": "密碼錯誤",
+    "error": "錯誤",
+    "success": "成功"
   },
 
   "register": {
@@ -23,6 +27,7 @@
     "alreadyHaveAccount": "已經有賬號？",
     "logIn!": "登錄！",
     "signUp": "註冊",
-    "wrongEmailFormat": "錯誤的電子郵件格式"
+    "wrongEmailFormat": "錯誤的電子郵件格式",
+    "success": "成功"
   }
 }

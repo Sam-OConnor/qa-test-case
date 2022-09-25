@@ -1,18 +1,56 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Card, Form, Input, Button } from "antd";
+import { Card, Form, Input, Button, notification } from "antd";
 import LangSelector from "../components/LangSelector";
 
 const Login = () => {
+  const [qaTestDb, setQaTestDb] = useState(
+    JSON.parse(localStorage.getItem("qaTestDb")) || []
+  );
   const { t } = useTranslation();
 
-  const onFinish = (values) => {
-    console.log("Success:", values);
+  useEffect(() => {
+    localStorage.setItem("qaTestDb", JSON.stringify(qaTestDb));
+  }, [qaTestDb]);
+
+  const openNotificationWithIcon = ({ type, message, description }) => {
+    notification[type]({
+      message,
+      description,
+    });
   };
 
-  const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
+  const onFinish = (values) => {
+    const { email, password } = values;
+
+    const usersByEmail = qaTestDb.filter((user) => user.email === email);
+
+    if (!usersByEmail || usersByEmail.length === 0) {
+      openNotificationWithIcon({
+        type: "error",
+        message: t("login.error"),
+        description: t("login.userNotFound"),
+      });
+      return;
+    }
+
+    const result = usersByEmail.find((user) => user.password === password);
+
+    if (!result) {
+      openNotificationWithIcon({
+        type: "error",
+        message: t("login.error"),
+        description: t("login.wrongPassword"),
+      });
+      return;
+    } else {
+      openNotificationWithIcon({
+        type: "success",
+        message: t("login.success"),
+        description: "",
+      });
+    }
   };
 
   return (
@@ -21,7 +59,6 @@ const Login = () => {
         name="login"
         size="large"
         onFinish={onFinish}
-        onFinishFailed={onFinishFailed}
         validateTrigger="onSubmit"
         initialValues={{
           remember: true,
