@@ -12,6 +12,7 @@ import {
 } from "antd";
 import { InfoCircleOutlined } from "@ant-design/icons";
 import LangSelector from "../components/LangSelector";
+import "./style.scss";
 
 const lowerCaseRegex = "(?=.*[a-z])";
 const upperCaseRegex = "(?=.*[A-Z])";
@@ -55,7 +56,11 @@ const Registration = () => {
   };
 
   return (
-    <Card title={t("register.registration")} extra={<LangSelector />}>
+    <Card
+      className="card"
+      title={t("register.registration")}
+      extra={<LangSelector />}
+    >
       <Form
         name="login"
         size="large"
@@ -68,6 +73,7 @@ const Registration = () => {
         <div>
           {t("register.email")}
           <Form.Item
+            className="input"
             name="email"
             rules={[
               {
@@ -87,6 +93,7 @@ const Registration = () => {
         <div>
           {t("register.password")}
           <Form.Item
+            className="input"
             name="password"
             rules={[
               {
@@ -102,6 +109,7 @@ const Registration = () => {
         <div>
           {t("register.repeatPasword")}
           <Form.Item
+            className="input"
             name="repeatPassword"
             rules={[
               {
@@ -133,6 +141,7 @@ const Registration = () => {
         <Form.Item style={{ marginTop: 20, marginBottom: 0 }}>
           <Button
             type="primary"
+            className="button"
             htmlType="submit"
             size="large"
             style={{ margin: "0 auto", display: "block", minWidth: 140 }}

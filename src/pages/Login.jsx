@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Card, Form, Input, Button, notification } from "antd";
 import LangSelector from "../components/LangSelector";
+import "./style.scss";
 
 const Login = () => {
   const [qaTestDb, setQaTestDb] = useState(
@@ -54,7 +55,7 @@ const Login = () => {
   };
 
   return (
-    <Card title={t("login.login")} extra={<LangSelector />}>
+    <Card className="card" title={t("login.login")} extra={<LangSelector />}>
       <Form
         name="login"
         size="large"
@@ -67,6 +68,7 @@ const Login = () => {
         <div>
           {t("login.email")}
           <Form.Item
+            className="input"
             name="email"
             rules={[
               {
@@ -86,6 +88,7 @@ const Login = () => {
         <div>
           {t("login.password")}
           <Form.Item
+            className="input"
             name="password"
             rules={[
               {
@@ -107,6 +110,7 @@ const Login = () => {
         <Form.Item style={{ marginTop: 20, marginBottom: 0 }}>
           <Button
             type="primary"
+            className="button"
             htmlType="submit"
             size="large"
             style={{ margin: "0 auto", display: "block", minWidth: 140 }}
