@@ -7,7 +7,11 @@
     "dontHaveAccount": "Non hai un account?",
     "signUp!": "Iscrizione!",
     "signIn": "Registrazione",
-    "wrongEmailFormat": "Formato e-mail errato"
+    "wrongEmailFormat": "Formato e-mail errato",
+    "userNotFound": "Utente non trovato",
+    "wrongPassword": "Password errata",
+    "error": "errore",
+    "success": "successo"
   },
 
   "register": {
@@ -23,6 +27,7 @@
     "alreadyHaveAccount": "Alreadi have account?",
     "logIn!": "Log In!",
     "signUp": "Sign up",
-    "wrongEmailFormat": "Wrong email format"
+    "wrongEmailFormat": "Wrong email format",
+    "success": "success"
   }
 }
